@@ -49,19 +49,44 @@ class CarProblemRetriever:
             doc = result['document']
             score = result['score']
             
+            # Handle both old and new JSON formats
+            title = doc.get('title') or doc.get('problem', 'Unknown Issue')
+            symptoms = doc.get('symptoms', [])
+            taglish_symptoms = doc.get('taglish_symptoms', [])
+            diagnosis = doc.get('diagnosis', 'No diagnosis available')
+            causes = doc.get('possible_causes') or doc.get('causes', [])
+            urgency = doc.get('urgency', 'UNKNOWN')
+            category = doc.get('category', 'General')
+            
+            # Build context string
             context = f"""
 Problem {i} (Relevance: {score:.2%}):
-Category: {doc['category']}
-Issue: {doc['problem']}
-Diagnosis: {doc['diagnosis']}
-Symptoms: {', '.join(doc['symptoms'])}
-Causes: {', '.join(doc['causes'])}
-Urgency: {doc['urgency']}
-Typical Cost: ₱{doc['typical_cost_php']['min']:,} - ₱{doc['typical_cost_php']['max']:,}
-Repair Time: {doc['repair_time_hours']} hours
-Notes: {doc['notes']}
-""".strip()
+Category: {category}
+Issue: {title}
+Diagnosis: {diagnosis}
+Symptoms: {', '.join(symptoms)}"""
             
+            if taglish_symptoms:
+                context += f"\nTaglish Symptoms: {', '.join(taglish_symptoms)}"
+            
+            context += f"\nPossible Causes: {', '.join(causes)}"
+            context += f"\nUrgency: {urgency}"
+            
+            # Add cost/time info if available
+            if 'typical_cost_php' in doc:
+                cost = doc['typical_cost_php']
+                context += f"\nTypical Cost: ₱{cost.get('min', 0):,} - ₱{cost.get('max', 0):,}"
+            
+            if 'repair_time_hours' in doc:
+                context += f"\nRepair Time: {doc['repair_time_hours']} hours"
+            
+            if 'notes' in doc:
+                context += f"\nNotes: {doc['notes']}"
+            
+            if 'estimated_fix' in doc:
+                context += f"\nSuggested Fix: {doc['estimated_fix']}"
+            
+            context = context.strip()
             context_parts.append(context)
         
         return "\n\n" + "\n\n---\n\n".join(context_parts)
@@ -95,9 +120,10 @@ if __name__ == "__main__":
     print(f"Found {len(results)} relevant problems:\n")
     for i, result in enumerate(results, 1):
         doc = result['document']
-        print(f"{i}. {doc['problem']}")
-        print(f"   Diagnosis: {doc['diagnosis']}")
-        print(f"   Urgency: {doc['urgency']}")
+        title = doc.get('title') or doc.get('problem', 'Unknown')
+        print(f"{i}. {title}")
+        print(f"   Diagnosis: {doc.get('diagnosis', 'N/A')}")
+        print(f"   Urgency: {doc.get('urgency', 'N/A')}")
         print(f"   Score: {result['score']:.3f}\n")
     
     print("\n" + "="*60)

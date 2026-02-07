@@ -47,27 +47,47 @@ ars-langgraph-chatbot/
 - **LangChain** — Orchestration and chains
 - **LangGraph** — Agentic graph-based flow control
 - **Google Gemini** — LLM inference
-- **ChromaDB** — Vector database for RAG
+- **Sentence-Transformers** — Vector embeddings for semantic search (Python 3.14 compatible)
 - **Pydantic v2** — Data validation
 
 ## 📊 Current Status
 
 Phase 1 — Environment & Foundation: ✅ Complete  
-Phase 2 — RAG & Diagnosis: ⏳ In Progress  
+Phase 2 — RAG & Diagnosis: ✅ Complete  
 Phase 3 — Cost & Taglish: ⬜ Not Started  
 Phase 4 — Booking & Polish: ⬜ Not Started
 
-See [PROJECT_PROGRESS.md](../PROJECT_PROGRESS.md) for detailed tracking.
+**What's Working Now:**
+- ✅ 25 car problems loaded with Taglish support
+- ✅ Semantic search using Sentence-Transformers
+- ✅ RAG-powered diagnosis with Gemini 2.0 Flash
+- ✅ Intent classification
+- ✅ Urgency level detection (EMERGENCY | DON'T DRIVE | DRIVE CAREFULLY | CAN DRIVE)
+- ✅ Interactive chat mode
+
+See [PHASE2_COMPLETE.md](PHASE2_COMPLETE.md) for detailed Phase 2 documentation.
 
 ## 🧪 Testing
 
 ```bash
-# Run all tests
-python -m pytest tests/ -v
+# Test vector store
+python -m app.rag.vector_store
 
-# Test specific module
-python -m pytest tests/test_diagnosis.py -v
+# Test retriever
+python -m app.rag.retriever
+
+# Test diagnosis node
+python -m app.nodes.diagnosis
+
+# Run interactive mode
+python app/main.py
 ```
+
+**Try these test cases:**
+- `my car won't start` → Dead battery diagnosis
+- `umiinit ang engine ko` → Overheating (Taglish)
+- `squeaky brakes when stopping` → Brake wear
+- `kumakatok ang engine` → Engine knocking (Taglish)
 
 ## 📝 Development Notes
 

@@ -45,12 +45,21 @@ class SimpleVectorStore:
         texts_to_embed = []
         for doc in self.documents:
             # Combine multiple fields for better semantic matching
+            # Handle both old and new JSON formats
+            title = doc.get('title') or doc.get('problem', '')
+            symptoms = doc.get('symptoms', [])
+            taglish_symptoms = doc.get('taglish_symptoms', [])
+            diagnosis = doc.get('diagnosis', '')
+            causes = doc.get('possible_causes') or doc.get('causes', [])
+            category = doc.get('category', '')
+            
             searchable_text = (
-                f"{doc['problem']} "
-                f"{' '.join(doc['symptoms'])} "
-                f"{doc['diagnosis']} "
-                f"{' '.join(doc['causes'])} "
-                f"{doc['category']}"
+                f"{title} "
+                f"{' '.join(symptoms)} "
+                f"{' '.join(taglish_symptoms)} "
+                f"{diagnosis} "
+                f"{' '.join(causes)} "
+                f"{category}"
             )
             texts_to_embed.append(searchable_text)
         
@@ -145,8 +154,9 @@ if __name__ == "__main__":
         for i, result in enumerate(results, 1):
             doc = result['document']
             score = result['score']
-            print(f"\n{i}. {doc['problem']}")
-            print(f"   Category: {doc['category']}")
-            print(f"   Diagnosis: {doc['diagnosis']}")
-            print(f"   Urgency: {doc['urgency']}")
+            title = doc.get('title') or doc.get('problem', 'Unknown')
+            print(f"\n{i}. {title}")
+            print(f"   Category: {doc.get('category', 'N/A')}")
+            print(f"   Diagnosis: {doc.get('diagnosis', 'N/A')}")
+            print(f"   Urgency: {doc.get('urgency', 'N/A')}")
             print(f"   Similarity: {score:.3f}")
