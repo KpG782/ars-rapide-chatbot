@@ -1,0 +1,28 @@
+# ARS Rapide LangGraph Chatbot — Minimal Dependencies
+# Python 3.10+ (tested with 3.14)
+# For Phase 1 testing only - will add more in Phase 2
+
+# Core LangChain (includes langchain-core)
+langchain
+
+# Graph framework
+langgraph
+
+# Google Gemini API
+google-generativeai
+langchain-google-genai
+
+# Data validation
+pydantic>=2.0
+pydantic-settings
+
+# Environment
+python-dotenv
+
+# HTTP
+requests
+
+# Phase 2: Vector Database for RAG (using in-memory approach for Python 3.14 compatibility)
+langchain-community
+sentence-transformers  # For embeddings
+scikit-learn  # For cosine similarity

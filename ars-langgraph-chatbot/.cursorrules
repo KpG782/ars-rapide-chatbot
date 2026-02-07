@@ -1,0 +1,28 @@
+# ARS Rapide Chatbot — Cursor Rules
+
+# Python version
+python_version = "3.10"
+
+# Never suggest these
+deny_packages = ["rasa", "rasa-sdk", "dialogflow", "botpress"]
+
+# Code style
+- Use type hints on every function signature
+- Use Pydantic v2 BaseModel for all data classes
+- Max 150 lines per file
+- Docstrings on every function (one-liner is okay)
+- No inline API keys ever
+- All LLM prompts go in app/utils/prompts.py
+- Imports at the top, grouped: stdlib → third-party → local
+
+# When editing
+- Show only the minimal diff needed
+- Confirm file path before code
+- Warn about anything that could break
+
+# Naming conventions
+- Files: snake_case
+- Classes: PascalCase
+- Functions: snake_case
+- Constants: UPPER_CASE
+- Pydantic models: PascalCase (e.g., ChatState, DiagnosisResult)

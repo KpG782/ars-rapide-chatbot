@@ -1,0 +1,182 @@
+[
+  {
+    "service_id": "engine_diagnostics",
+    "service_name": "Engine Diagnostics & Repair",
+    "icon": "⚙️",
+    "description": "Full engine inspection using OBD-II scanning and hands-on diagnosis. Covers knocking, misfiring, poor performance, and check engine light issues.",
+    "related_problems": ["check_engine_light", "engine_knocking", "spark_plug_worn", "fuel_pump_failure", "fuel_economy_poor"],
+    "included_checks": [
+      "OBD-II diagnostic scan",
+      "Engine oil level and condition",
+      "Spark plug inspection",
+      "Air and fuel filter check",
+      "Timing belt or chain inspection"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "brake_services",
+    "service_name": "Brake Services",
+    "icon": "🛑",
+    "description": "Complete brake system service including pad replacement, disc resurfacing or replacement, brake fluid flush, and caliper inspection.",
+    "related_problems": ["squeaky_brakes"],
+    "included_checks": [
+      "Brake pad thickness measurement",
+      "Disc/rotor inspection",
+      "Brake fluid level and condition",
+      "Caliper function check",
+      "Brake line inspection"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "cooling_system",
+    "service_name": "Cooling System Service",
+    "icon": "❄️",
+    "description": "Radiator, water pump, thermostat, and coolant hose inspection and repair. Critical in Philippine climate to prevent overheating.",
+    "related_problems": ["engine_overheating", "radiator_leak", "water_pump_failure"],
+    "included_checks": [
+      "Coolant level and concentration",
+      "Radiator condition and flow",
+      "Thermostat function",
+      "Water pump inspection",
+      "All hoses and clamps"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "electrical_system",
+    "service_name": "Electrical System Repair",
+    "icon": "⚡",
+    "description": "Battery, alternator, starter, and wiring system diagnosis and repair. Covers all electrical warning lights and power issues.",
+    "related_problems": ["dead_battery", "alternator_failure", "starter_motor_failure", "dashboard_warning_lights"],
+    "included_checks": [
+      "Battery voltage and condition test",
+      "Alternator output test",
+      "Starter motor check",
+      "Wiring and ground connections",
+      "All dashboard warning lights"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "transmission_service",
+    "service_name": "Transmission Service",
+    "icon": "🔄",
+    "description": "Automatic and manual transmission fluid change, inspection, and repair. Covers shifting issues, slipping, and jerking.",
+    "related_problems": ["transmission_shudder", "clutch_slipping"],
+    "included_checks": [
+      "Transmission fluid level and condition",
+      "Shift quality test",
+      "Clutch check (manual cars)",
+      "Torque converter test (automatic)",
+      "Transmission mount inspection"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "ac_service",
+    "service_name": "AC & Cooling Service",
+    "icon": "🌬️",
+    "description": "Full air conditioning system service. Recharge, compressor repair, condenser cleaning, and leak detection. Non-negotiable in Philippine heat.",
+    "related_problems": ["ac_not_cooling"],
+    "included_checks": [
+      "Refrigerant gas level",
+      "Compressor function",
+      "Condenser and evaporator condition",
+      "AC belt check",
+      "Leak detection"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "tire_services",
+    "service_name": "Tire Services",
+    "icon": "🔵",
+    "description": "Tire repair (vulcanize), replacement, balancing, and pressure check. Includes puncture repair for tread punctures.",
+    "related_problems": ["flat_tire", "tire_uneven_wear"],
+    "included_checks": [
+      "Tire pressure on all 4 wheels",
+      "Tread depth check",
+      "Puncture location and repair assessment",
+      "Balance and alignment check",
+      "Sidewall integrity"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "suspension_steering",
+    "service_name": "Suspension & Steering",
+    "icon": "🔧",
+    "description": "Shock absorber, strut, spring, and steering system service. Alignment included. Very important for PH road conditions.",
+    "related_problems": ["suspension_bouncy", "power_steering_heavy", "wheel_alignment"],
+    "included_checks": [
+      "Shock absorber condition",
+      "Spring check",
+      "Ball joints and tie rods",
+      "Steering fluid level",
+      "Wheel alignment measurement"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "exhaust_system",
+    "service_name": "Exhaust System Service",
+    "icon": "💨",
+    "description": "Muffler, exhaust pipe, manifold, and catalytic converter inspection and repair. Includes leak detection.",
+    "related_problems": ["exhaust_loud", "muffler_exhaust_leak"],
+    "included_checks": [
+      "Visual exhaust system inspection",
+      "Leak detection (smoke test)",
+      "Muffler condition",
+      "Catalytic converter check",
+      "Exhaust manifold gaskets"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "oil_maintenance",
+    "service_name": "Oil Change & Basic Maintenance",
+    "icon": "🛢️",
+    "description": "Engine oil and filter replacement with a basic vehicle check. The most common and most important regular maintenance service.",
+    "related_problems": ["oil_leak", "engine_oil_change", "fuel_economy_poor"],
+    "included_checks": [
+      "Oil drain and refill with correct grade",
+      "Oil filter replacement",
+      "Fluid levels topped up (coolant, brake, steering)",
+      "Belt inspection",
+      "Basic under-hood check"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "preventive_maintenance",
+    "service_name": "Preventive Maintenance (PMS)",
+    "icon": "📋",
+    "description": "Full scheduled maintenance package per manufacturer recommendations. The best way to keep your car running well and cheap long-term.",
+    "related_problems": ["fuel_economy_poor", "spark_plug_worn", "engine_oil_change"],
+    "included_checks": [
+      "Oil, filter, and fluid changes",
+      "Spark plug inspection or replacement",
+      "Air filter replacement",
+      "Brake inspection",
+      "Full system safety check"
+    ],
+    "available_at": "All ARS service centers"
+  },
+  {
+    "service_id": "full_diagnostic",
+    "service_name": "Full Vehicle Diagnostic",
+    "icon": "🔍",
+    "description": "Comprehensive OBD-II scan plus hands-on inspection of all major systems. The first thing to do when you are not sure what is wrong.",
+    "related_problems": ["check_engine_light", "dashboard_warning_lights"],
+    "included_checks": [
+      "OBD-II scan — reads all stored error codes",
+      "Engine, transmission, and chassis codes",
+      "Visual inspection of all systems",
+      "Test drive by mechanic",
+      "Full written report of findings"
+    ],
+    "available_at": "All ARS service centers"
+  }
+]

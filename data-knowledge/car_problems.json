@@ -1,0 +1,818 @@
+[
+  {
+    "id": "dead_battery",
+    "category": "electrical",
+    "title": "Dead or Weak Battery",
+    "symptoms": [
+      "car won't start",
+      "completely silent when turning key",
+      "no dashboard lights",
+      "clicking sound when starting",
+      "headlights dim or off",
+      "battery warning light on"
+    ],
+    "taglish_symptoms": [
+      "hindi gumagana ang kotse",
+      "tahimik lang kapag sinusi",
+      "walang ilaw sa dashboard",
+      "may click click kapag sinusi",
+      "mahina ang headlights"
+    ],
+    "diagnosis": "Dead or discharged battery. Can be caused by leaving accessories on, old battery (over 3 years), or failing alternator. Try jump-starting first. If it doesn't hold charge, replace the battery.",
+    "possible_causes": [
+      "Battery is old and degraded (over 3 years)",
+      "Alternator not charging the battery",
+      "Left car accessories on for extended period",
+      "Corroded or loose battery terminals",
+      "Short circuit in the electrical system"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Car cannot start without battery power.",
+    "dtc_codes": ["P0620", "P0622"],
+    "common_ph_vehicles": ["Toyota Vios", "Mitsubishi Mirage G4", "Honda City", "Suzuki Ertiga"],
+    "estimated_fix": "Jump-start or battery replacement. If alternator is the root cause, alternator repair needed."
+  },
+  {
+    "id": "engine_overheating",
+    "category": "cooling_system",
+    "title": "Engine Overheating",
+    "symptoms": [
+      "temperature gauge goes to maximum",
+      "steam or smoke from hood",
+      "engine turns off suddenly",
+      "coolant leaking",
+      "radiator fan not working",
+      "sweet smell from engine bay"
+    ],
+    "taglish_symptoms": [
+      "umiinit ang kotse",
+      "may usok sa hood",
+      "biglang nag-off ang kotse",
+      "may tagas na tubig sa radiator",
+      "hindi gumagana ang fan ng radiator",
+      "matamis ang bango sa engine"
+    ],
+    "diagnosis": "Engine is overheating. Most common causes are low coolant, clogged radiator, broken thermostat, or failed water pump. STOP DRIVING IMMEDIATELY to prevent engine damage.",
+    "possible_causes": [
+      "Low or empty coolant level",
+      "Clogged or dirty radiator",
+      "Thermostat stuck in closed position",
+      "Water pump failure",
+      "Broken or leaking radiator hose",
+      "Head gasket blown"
+    ],
+    "urgency": "EMERGENCY",
+    "urgency_reason": "Continuing to drive will cause severe engine damage. Pull over and let it cool down.",
+    "dtc_codes": ["P0115", "P0116", "P0117", "P0118"],
+    "common_ph_vehicles": ["Toyota Vios", "Toyota Innova", "Mitsubishi Xpander", "Toyota Hilux"],
+    "estimated_fix": "Refill coolant if low. If radiator or thermostat, replacement needed. Head gasket is expensive — do not ignore overheating."
+  },
+  {
+    "id": "squeaky_brakes",
+    "category": "brake_system",
+    "title": "Squeaking or Grinding Brakes",
+    "symptoms": [
+      "squeaking sound when braking",
+      "grinding noise when pressing brake",
+      "vibration when braking",
+      "brake pedal feels soft",
+      "car takes longer to stop",
+      "brake warning light on"
+    ],
+    "taglish_symptoms": [
+      "nakikita ang preno",
+      "may ingay kapag nag-brake",
+      "nag-vibrate kapag huminto",
+      "mahina ang preno",
+      "malayo bago huminto ang kotse",
+      "naka-on ang brake light sa dashboard"
+    ],
+    "diagnosis": "Brake pads are likely worn and need replacement. Squeaking = pads almost worn. Grinding = pads fully worn, metal-to-metal contact. Get brakes serviced immediately.",
+    "possible_causes": [
+      "Brake pads worn past safe limit",
+      "Brake disc/rotor warped or scored",
+      "Brake caliper sticking",
+      "Brake fluid low",
+      "Wet or dirty brake pads (temporary squeak)"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Worn brakes mean reduced stopping power. Unsafe to drive on Metro Manila roads.",
+    "dtc_codes": ["P0571"],
+    "common_ph_vehicles": ["Toyota Vios", "Honda City", "Mitsubishi Mirage G4", "Ford Ranger"],
+    "estimated_fix": "Brake pad replacement. If discs are also damaged, replace both pads and discs."
+  },
+  {
+    "id": "check_engine_light",
+    "category": "engine_electrical",
+    "title": "Check Engine Light On",
+    "symptoms": [
+      "check engine light is on",
+      "malfunction indicator lamp lit",
+      "no other obvious symptoms",
+      "engine running normally but light stays on",
+      "sometimes light flashes"
+    ],
+    "taglish_symptoms": [
+      "naka-on ang check engine light",
+      "hindi naman may ibang problema",
+      "patuloy na naka-on ang warning light",
+      "nag-flash ang check engine light"
+    ],
+    "diagnosis": "The OBD-II system has detected a fault and stored a Diagnostic Trouble Code (DTC). Need to scan the car with an OBD-II scanner to read the exact code. Could be anything from a loose gas cap to a major engine issue.",
+    "possible_causes": [
+      "Loose or missing gas cap (most common, easiest fix)",
+      "Oxygen sensor failure",
+      "Catalytic converter issue",
+      "Mass airflow sensor dirty",
+      "Spark plug worn",
+      "Fuel injector problem",
+      "Transmission fault"
+    ],
+    "urgency": "DRIVE CAREFULLY",
+    "urgency_reason": "If the light is steady, you can drive to a shop. If it is flashing, reduce speed and go directly to a mechanic.",
+    "dtc_codes": ["P0171", "P0420", "P0442", "P0507", "P0300"],
+    "common_ph_vehicles": ["All modern vehicles with OBD-II"],
+    "estimated_fix": "Get an OBD scan first (₱200-500 at most shops). Fix depends on the actual code."
+  },
+  {
+    "id": "engine_knocking",
+    "category": "engine",
+    "title": "Engine Knocking or Rattling",
+    "symptoms": [
+      "knocking sound from engine",
+      "rattling noise when accelerating",
+      "loud banging from under the hood",
+      "knocking gets worse at higher RPM",
+      "engine sounds rough"
+    ],
+    "taglish_symptoms": [
+      "kumakatok ang engine",
+      "may ingay na rattle kapag nag-accelerate",
+      "malakas na tunog sa ilalim ng hood",
+      "mas malakas ang tunog kapag mabilis",
+      "basag ang tunog ng engine"
+    ],
+    "diagnosis": "Engine knocking can indicate low oil, bad fuel octane, worn connecting rods, or carbon buildup. Low oil knocking is serious. Check oil level immediately.",
+    "possible_causes": [
+      "Low engine oil — CHECK IMMEDIATELY",
+      "Wrong octane fuel used",
+      "Worn connecting rod bearings",
+      "Carbon buildup on pistons",
+      "Spark plugs worn or wrong gap",
+      "Engine timing off"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "If caused by low oil, continuing to drive will destroy the engine. Stop and check oil first.",
+    "dtc_codes": ["P0325", "P0326", "P0327", "P0328"],
+    "common_ph_vehicles": ["Toyota Vios", "Toyota Hilux", "Mitsubishi Mirage G4", "Honda City"],
+    "estimated_fix": "Top up oil if low. If knocking continues, need engine inspection. Connecting rod failure is expensive."
+  },
+  {
+    "id": "transmission_shudder",
+    "category": "transmission",
+    "title": "Transmission Shuddering or Jerking",
+    "symptoms": [
+      "car shudders when shifting gears",
+      "jerky acceleration",
+      "transmission slipping",
+      "hard shifting",
+      "RPM jumping up and down",
+      "transmission warning light on"
+    ],
+    "taglish_symptoms": [
+      "nag-shake ang kotse kapag nag-shift",
+      "jerky ang pag-accelerate",
+      "nag-slip ang transmission",
+      "mahirap mag-shift",
+      "nag-jump ang RPM"
+    ],
+    "diagnosis": "Transmission fluid may be low or degraded, or there could be a transmission component failure. For automatic transmissions, this often means the fluid needs changing. For manual, check clutch and transmission fluid.",
+    "possible_causes": [
+      "Low or dirty transmission fluid",
+      "Worn transmission bands or clutch plates",
+      "Torque converter failure (automatic)",
+      "Clutch worn (manual)",
+      "Transmission sensor malfunction",
+      "Transmission overheating"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Driving with transmission issues can cause total transmission failure, which is very expensive to repair.",
+    "dtc_codes": ["P0700", "P0711", "P0712", "P0713", "P0730"],
+    "common_ph_vehicles": ["Toyota Innova", "Mitsubishi Xpander", "Toyota Hilux", "Ford Ranger"],
+    "estimated_fix": "Transmission fluid change if that is the issue. Full transmission repair or replacement is ₱30,000-100,000+."
+  },
+  {
+    "id": "flat_tire",
+    "category": "tire",
+    "title": "Flat or Punctured Tire",
+    "symptoms": [
+      "tire looks flat or deflated",
+      "car pulling to one side",
+      "vibration on the road",
+      "loud thumping sound while driving",
+      "car feels unstable",
+      "tire pressure warning light on"
+    ],
+    "taglish_symptoms": [
+      "flat ang gulong",
+      "hinahawakan ang kotse sa isang side",
+      "nag-vibrate habang nagmamaneho",
+      "may malakas na tunog na thump",
+      "hindi stable ang kotse",
+      "naka-on ang tire pressure light"
+    ],
+    "diagnosis": "Tire has a puncture or is severely under-inflated. If visibly flat, do not drive. Use the spare tire or call for roadside assistance.",
+    "possible_causes": [
+      "Nail, screw, or sharp object in the tire",
+      "Tire sidewall damage from pothole",
+      "Valve stem leaking",
+      "Tire too old and cracked (sidewall blowout)",
+      "Tire pressure too low from neglect"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Driving on a flat tire damages the rim and is unsafe, especially on expressways.",
+    "dtc_codes": [],
+    "common_ph_vehicles": ["All vehicles — especially pickup trucks on rough PH roads"],
+    "estimated_fix": "Vulcanize (repair) if puncture is on tread: ₱100-300. Replace tire if sidewall damage: ₱3,000-8,000 depending on size."
+  },
+  {
+    "id": "ac_not_cooling",
+    "category": "air_conditioning",
+    "title": "Air Conditioning Not Cooling",
+    "symptoms": [
+      "AC blows warm air only",
+      "AC compressor not engaging",
+      "AC works intermittently",
+      "loud noise from AC compressor",
+      "AC smell is musty or bad",
+      "AC only weak airflow"
+    ],
+    "taglish_symptoms": [
+      "hindi naglalamig ang aircon",
+      "mainit lang ang hangin",
+      "hindi gumagana ang compressor",
+      "may ingay sa aircon",
+      "mabaho ang aircon",
+      "mahina ang hangin ng aircon"
+    ],
+    "diagnosis": "Could be low refrigerant (gas), compressor failure, condenser clogged, or a bad expansion valve. In PH climate, AC failure is urgent for comfort and safety during long drives.",
+    "possible_causes": [
+      "Low refrigerant gas — needs recharging",
+      "AC compressor worn or seized",
+      "Condenser coil clogged or dirty",
+      "Expansion valve stuck",
+      "AC relay or fuse blown",
+      "Evaporator coil iced up"
+    ],
+    "urgency": "DRIVE CAREFULLY",
+    "urgency_reason": "Not an immediate safety issue but dangerous in Philippine heat, especially for long drives. Get it checked soon.",
+    "dtc_codes": ["P0522", "P0523", "P0525"],
+    "common_ph_vehicles": ["Toyota Vios", "Mitsubishi Xpander", "Toyota Innova", "Honda City"],
+    "estimated_fix": "Recharge gas: ₱1,500-3,000. Compressor replacement: ₱8,000-20,000. Condenser cleaning: ₱500-1,500."
+  },
+  {
+    "id": "oil_leak",
+    "category": "engine",
+    "title": "Oil Leak Under the Car",
+    "symptoms": [
+      "oil spots or puddle under the car",
+      "oil level dropping quickly",
+      "smoke from engine when hot",
+      "burning smell from engine",
+      "engine knocking after driving long"
+    ],
+    "taglish_symptoms": [
+      "may tagas na langis sa ilalim ng kotse",
+      "mabilis maubos ang oil",
+      "may usok sa engine kapag mainit",
+      "may sunog na bango sa engine",
+      "kumakatok ang engine pagkatapos magmaneho"
+    ],
+    "diagnosis": "Oil is leaking from a gasket, seal, or fitting. Find the source of the leak. If oil level is critically low, do not drive. Top up oil immediately and get it inspected.",
+    "possible_causes": [
+      "Worn oil pan gasket",
+      "Valve cover gasket leaking",
+      "Rear main seal worn",
+      "Oil filter not sealed properly",
+      "Crankshaft seal damaged",
+      "Engine block crack (rare but serious)"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Low oil will cause engine seizure. Top up oil and get to a mechanic before driving far.",
+    "dtc_codes": [],
+    "common_ph_vehicles": ["Toyota Hilux", "Ford Ranger", "Nissan Navara", "Toyota Fortuner"],
+    "estimated_fix": "Gasket replacement: ₱2,000-8,000 depending on which gasket. Oil seal: ₱1,500-5,000 labor included."
+  },
+  {
+    "id": "power_steering_heavy",
+    "category": "steering",
+    "title": "Heavy or Stiff Steering",
+    "symptoms": [
+      "steering wheel is very hard to turn",
+      "steering feels heavy especially when parked",
+      "steering fluid low or leaking",
+      "whining noise from steering",
+      "steering gets worse at low speed"
+    ],
+    "taglish_symptoms": [
+      "mahirap i-turn ang steering wheel",
+      "mabigat ang steering lalo kapag parked",
+      "mababa ang steering fluid",
+      "may ingay na whine sa steering",
+      "mas mahirap i-steer kapag mabagal"
+    ],
+    "diagnosis": "Power steering system issue. Most common is low steering fluid. Could also be a worn power steering pump or rack and pinion problem.",
+    "possible_causes": [
+      "Low power steering fluid",
+      "Power steering pump failing",
+      "Steering rack and pinion worn",
+      "Steering belt loose or broken",
+      "Air in the steering system"
+    ],
+    "urgency": "DRIVE CAREFULLY",
+    "urgency_reason": "Heavy steering makes the car harder to control, especially in tight turns and emergency maneuvers.",
+    "dtc_codes": ["P0550", "P0551", "P0552", "P0553"],
+    "common_ph_vehicles": ["Toyota Vios", "Mitsubishi Mirage G4", "Honda City", "Toyota Wigo"],
+    "estimated_fix": "Refill steering fluid: ₱300-500. Power steering pump replacement: ₱5,000-15,000."
+  },
+  {
+    "id": "exhaust_loud",
+    "category": "exhaust",
+    "title": "Loud Exhaust or Backfiring",
+    "symptoms": [
+      "exhaust is louder than normal",
+      "car backfires",
+      "popping sounds from exhaust",
+      "smell of exhaust inside the cabin",
+      "visible rust or hole in exhaust pipe"
+    ],
+    "taglish_symptoms": [
+      "malakas ang exhaust",
+      "nag-backfire ang kotse",
+      "may popping na tunog sa exhaust",
+      "nababahala ang amoy ng exhaust sa loob",
+      "may bukas o kalawangin sa exhaust pipe"
+    ],
+    "diagnosis": "Exhaust system has a leak or a component has failed. Could be a cracked muffler, broken exhaust pipe, or a bad catalytic converter. Exhaust fumes inside the cabin are dangerous.",
+    "possible_causes": [
+      "Muffler cracked or rusted through",
+      "Exhaust pipe joint loose or broken",
+      "Catalytic converter failed",
+      "Exhaust manifold cracked",
+      "Exhaust gasket blown"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Exhaust fumes (carbon monoxide) entering the cabin is a health emergency. Open windows and get to a shop immediately.",
+    "dtc_codes": ["P0420", "P0421", "P0430"],
+    "common_ph_vehicles": ["Toyota Hilux", "Mitsubishi L300", "Toyota HiAce", "Ford Ranger"],
+    "estimated_fix": "Muffler replacement: ₱3,000-8,000. Exhaust pipe repair: ₱1,500-4,000. Catalytic converter: ₱15,000-40,000."
+  },
+  {
+    "id": "suspension_bouncy",
+    "category": "suspension",
+    "title": "Bouncy or Rough Ride",
+    "symptoms": [
+      "car bounces excessively on bumps",
+      "ride feels very rough",
+      "car sways or dips on one side",
+      "knocking noise over bumps",
+      "car feels unstable at high speed"
+    ],
+    "taglish_symptoms": [
+      "sobrang bounce ng kotse",
+      "rough ang ride",
+      "nag-tilt ang kotse sa isang side",
+      "may tunog na knock sa bumps",
+      "hindi stable kapag mabilis"
+    ],
+    "diagnosis": "Suspension components are worn. On Philippine roads with many potholes, suspension wears faster than average. Most likely worn shock absorbers or struts.",
+    "possible_causes": [
+      "Worn shock absorbers or struts",
+      "Broken or worn coil springs",
+      "Worn bushings",
+      "Loose or worn tie rod ends",
+      "Unbalanced or misaligned wheels"
+    ],
+    "urgency": "DRIVE CAREFULLY",
+    "urgency_reason": "Poor suspension affects braking and handling. Dangerous on wet or uneven PH roads.",
+    "dtc_codes": [],
+    "common_ph_vehicles": ["Toyota Hilux", "Ford Ranger", "Nissan Navara", "Toyota Fortuner", "Mitsubishi Montero"],
+    "estimated_fix": "Shock absorber replacement: ₱3,000-10,000 per unit. Full suspension overhaul: ₱15,000-40,000."
+  },
+  {
+    "id": "fuel_economy_poor",
+    "category": "engine",
+    "title": "Poor Fuel Economy",
+    "symptoms": [
+      "fuel running out faster than usual",
+      "fuel consumption noticeably higher",
+      "engine runs rough at idle",
+      "hard to start sometimes",
+      "check engine light on"
+    ],
+    "taglish_symptoms": [
+      "mabilis maubos ang gasolina",
+      "mas maraming gas na ginagamit",
+      "rough ang engine sa idle",
+      "mahirap i-start minsan",
+      "naka-on ang check engine light"
+    ],
+    "diagnosis": "Multiple possible causes. Common ones in PH: dirty or clogged fuel filter, worn spark plugs, dirty air filter, or oxygen sensor fault. Metro Manila traffic also contributes heavily to poor fuel economy.",
+    "possible_causes": [
+      "Dirty or clogged fuel filter",
+      "Worn spark plugs",
+      "Dirty air filter",
+      "Oxygen sensor malfunction",
+      "Tire pressure too low",
+      "Engine tuning off",
+      "Heavy Metro Manila stop-and-go traffic"
+    ],
+    "urgency": "CAN DRIVE",
+    "urgency_reason": "Not a safety issue but costs money. Get routine maintenance done.",
+    "dtc_codes": ["P0171", "P0172", "P0300"],
+    "common_ph_vehicles": ["Toyota Vios", "Mitsubishi Mirage G4", "Honda City", "Toyota Wigo"],
+    "estimated_fix": "Spark plugs: ₱500-2,000. Air filter: ₱200-500. Fuel filter: ₱500-2,000. Oxygen sensor: ₱2,000-5,000."
+  },
+  {
+    "id": "alternator_failure",
+    "category": "electrical",
+    "title": "Alternator or Charging System Failure",
+    "symptoms": [
+      "battery warning light on dashboard",
+      "headlights flickering or dim",
+      "electrical accessories losing power",
+      "car stalls while driving",
+      "battery keeps dying",
+      "ammeter showing low charge"
+    ],
+    "taglish_symptoms": [
+      "naka-on ang battery warning light",
+      "nag-flicker ang headlights",
+      "nawawalan ng kuryente ang accessories",
+      "nag-stall ang kotse habang nagmamaneho",
+      "patuloy na namamatay ang battery"
+    ],
+    "diagnosis": "Alternator is not charging the battery while the engine runs. The battery will eventually die even if it is new. Replace the alternator.",
+    "possible_causes": [
+      "Alternator brushes worn",
+      "Alternator belt loose or snapped",
+      "Alternator voltage regulator failed",
+      "Wiring connection to alternator corroded",
+      "Alternator seized"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Car will stall when battery drains completely. Do not drive far from a mechanic.",
+    "dtc_codes": ["P0620", "P0622", "P0625", "P0626"],
+    "common_ph_vehicles": ["Toyota Vios", "Honda City", "Mitsubishi Mirage G4", "Toyota Innova"],
+    "estimated_fix": "Alternator replacement: ₱5,000-15,000 including labor. Belt: ₱500-1,500."
+  },
+  {
+    "id": "radiator_leak",
+    "category": "cooling_system",
+    "title": "Radiator Leak or Coolant Leak",
+    "symptoms": [
+      "coolant puddle under the car",
+      "sweet smell from engine area",
+      "coolant level dropping",
+      "temperature gauge rising",
+      "steam from radiator"
+    ],
+    "taglish_symptoms": [
+      "may tagas na coolant sa kotse",
+      "matamis na bango sa engine",
+      "nababawasan ang coolant",
+      "tumataas ang temperature gauge",
+      "may usok sa radiator"
+    ],
+    "diagnosis": "Radiator or a coolant hose has a leak. Could also be a cracked radiator core or a loose hose clamp. Top up coolant and get to a shop — do not let the engine overheat.",
+    "possible_causes": [
+      "Radiator core cracked or corroded",
+      "Radiator hose split or loose",
+      "Hose clamp loose",
+      "Radiator cap not sealing",
+      "Heater core leaking"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Coolant loss will cause overheating quickly. Top up and get to a mechanic.",
+    "dtc_codes": ["P0115", "P0116"],
+    "common_ph_vehicles": ["Toyota Innova", "Mitsubishi Xpander", "Toyota Hilux", "Toyota Fortuner"],
+    "estimated_fix": "Radiator replacement: ₱8,000-25,000. Hose replacement: ₱1,000-3,000. Radiator cap: ₱200-500."
+  },
+  {
+    "id": "wheel_alignment",
+    "category": "steering",
+    "title": "Car Pulling to One Side",
+    "symptoms": [
+      "car drifts or pulls to one side",
+      "steering wheel is off-center",
+      "uneven tire wear",
+      "car feels like it wants to turn",
+      "had to hit a pothole recently"
+    ],
+    "taglish_symptoms": [
+      "hinahawakan ng kotse sa isang side",
+      "hindi sentro ang steering wheel",
+      "uneven ang pagkagastos ng gulong",
+      "gusto mag-turn ng kotse",
+      "na-hit nag pothole kamakailan"
+    ],
+    "diagnosis": "Wheel alignment is off. Very common in the Philippines due to potholes and rough roads. Needs realignment at a shop with alignment equipment.",
+    "possible_causes": [
+      "Hit a pothole or road bump hard",
+      "Worn tie rod ends",
+      "Worn ball joints",
+      "Suspension component shifted",
+      "Uneven tire wear causing pull"
+    ],
+    "urgency": "DRIVE CAREFULLY",
+    "urgency_reason": "Misalignment causes uneven tire wear and reduces handling precision. Not immediately dangerous but should be fixed soon.",
+    "dtc_codes": [],
+    "common_ph_vehicles": ["All vehicles — especially on Metro Manila and provincial roads"],
+    "estimated_fix": "Wheel alignment: ₱500-1,500. If tie rod or ball joints are worn, replacement is ₱2,000-8,000."
+  },
+  {
+    "id": "starter_motor_failure",
+    "category": "electrical",
+    "title": "Starter Motor Not Working",
+    "symptoms": [
+      "clicking sound when turning key",
+      "engine cranks slowly or not at all",
+      "starter motor grinding noise",
+      "car won't start but battery is fine",
+      "lights are bright but engine won't crank"
+    ],
+    "taglish_symptoms": [
+      "may click click kapag sinusi ang susi",
+      "mabagal mag-crank ang engine",
+      "may grinding na ingay sa starter",
+      "hindi gumagana ang kotse kahit bago ang battery",
+      "maliwanag ang mga ilaw pero hindi nag-start"
+    ],
+    "diagnosis": "Starter motor has failed or the connection to it is bad. Battery is fine but the starter cannot draw enough current to crank the engine. Replace the starter.",
+    "possible_causes": [
+      "Starter motor windings worn out",
+      "Starter solenoid failed",
+      "Loose or corroded starter cable connections",
+      "Starter drive gear worn",
+      "Flywheel ring gear worn"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Car cannot start. Need towing or on-site repair.",
+    "dtc_codes": ["P0612", "P0613"],
+    "common_ph_vehicles": ["Toyota Vios", "Honda City", "Mitsubishi Mirage G4", "Toyota Hilux"],
+    "estimated_fix": "Starter motor replacement: ₱4,000-12,000 including labor."
+  },
+  {
+    "id": "spark_plug_worn",
+    "category": "ignition",
+    "title": "Worn or Fouled Spark Plugs",
+    "symptoms": [
+      "engine misfiring",
+      "rough idle",
+      "hard to start",
+      "reduced engine power",
+      "increased fuel consumption",
+      "engine vibrating"
+    ],
+    "taglish_symptoms": [
+      "nag-misfire ang engine",
+      "rough ang idle",
+      "mahirap i-start",
+      "mababa ang power ng engine",
+      "mabilis maubos ang gasolina",
+      "nag-vibrate ang engine"
+    ],
+    "diagnosis": "Spark plugs are worn, fouled, or have wrong gap. They are a consumable part and need regular replacement (every 20,000-40,000 km depending on type). Very cheap fix with big performance impact.",
+    "possible_causes": [
+      "Spark plugs over their service life",
+      "Carbon fouling on spark plugs",
+      "Oil fouling on spark plugs (indicates deeper issue)",
+      "Wrong spark plug gap",
+      "Wrong type of spark plug installed"
+    ],
+    "urgency": "CAN DRIVE",
+    "urgency_reason": "Safe to drive short distances but engine performance is degraded. Replace soon.",
+    "dtc_codes": ["P0300", "P0301", "P0302", "P0303", "P0304"],
+    "common_ph_vehicles": ["Toyota Vios", "Mitsubishi Mirage G4", "Honda City", "Suzuki Ertiga"],
+    "estimated_fix": "Spark plugs: ₱500-2,500 for a full set. Labor: ₱500-1,500."
+  },
+  {
+    "id": "fuel_pump_failure",
+    "category": "fuel_system",
+    "title": "Fuel Pump Failure",
+    "symptoms": [
+      "car sputters and stalls",
+      "engine cuts out at highway speed",
+      "hard to start after sitting",
+      "engine loses power suddenly",
+      "whining sound from fuel tank"
+    ],
+    "taglish_symptoms": [
+      "nag-sputter at nag-stall ang kotse",
+      "nag-off ang engine sa highway",
+      "mahirap i-start pagkatapos matagal",
+      "biglang nawawa ang power",
+      "may ingay na whine sa fuel tank"
+    ],
+    "diagnosis": "Fuel pump is not delivering enough fuel to the engine. The engine starves for fuel, especially at higher load or speed. Common in older vehicles in PH heat.",
+    "possible_causes": [
+      "Fuel pump worn or seized",
+      "Fuel pump relay failed",
+      "Fuel filter severely clogged (starving the pump)",
+      "Fuel pump wiring damaged",
+      "Contaminated fuel in tank"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Car will stall unpredictably. Dangerous in traffic, especially on expressways.",
+    "dtc_codes": ["P0230", "P0231", "P0232", "P0233"],
+    "common_ph_vehicles": ["Toyota Vios", "Toyota Hilux", "Mitsubishi Mirage G4", "Honda City"],
+    "estimated_fix": "Fuel pump replacement: ₱5,000-18,000. Fuel filter: ₱500-2,000 — always check filter first."
+  },
+  {
+    "id": "clutch_slipping",
+    "category": "transmission",
+    "title": "Clutch Slipping (Manual Cars)",
+    "symptoms": [
+      "engine RPM rises but car doesn't accelerate",
+      "clutch pedal feels loose or high",
+      "burning smell when shifting",
+      "car jerks when releasing clutch",
+      "hard to pull off from stop"
+    ],
+    "taglish_symptoms": [
+      "tumataas ang RPM pero hindi nag-aaccelerate",
+      "mababa ang clutch pedal",
+      "may sunog na bango kapag nag-shift",
+      "nag-jerk ang kotse kapag kinuha ang clutch",
+      "mahirap mag-move mula sa stop"
+    ],
+    "diagnosis": "Clutch plate is worn and slipping. The clutch can no longer grip the flywheel properly. Needs clutch replacement — this is a manual transmission issue only.",
+    "possible_causes": [
+      "Clutch plate worn past usable life",
+      "Pressure plate worn",
+      "Clutch release bearing failed",
+      "Clutch disc glazed",
+      "Riding the clutch pedal habitually"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Slipping clutch means the car cannot transmit power properly. Risk of stalling in traffic.",
+    "dtc_codes": [],
+    "common_ph_vehicles": ["Toyota Hilux", "Ford Ranger", "Nissan Navara", "Mitsubishi L300"],
+    "estimated_fix": "Clutch replacement: ₱8,000-25,000 for parts and labor. Requires transmission removal."
+  },
+  {
+    "id": "tire_uneven_wear",
+    "category": "tire",
+    "title": "Uneven Tire Wear",
+    "symptoms": [
+      "tires worn unevenly across the tread",
+      "one side of tire worn more",
+      "center or edges worn more than the other",
+      "car pulling to one side",
+      "vibration at highway speeds"
+    ],
+    "taglish_symptoms": [
+      "uneven ang pagkagastos ng gulong",
+      "isa na side mas mabilis magastos",
+      "mas mabilis magastos ang philhan",
+      "hinahawakan ang kotse sa isang side"
+    ],
+    "diagnosis": "Tires are wearing unevenly due to misaligned wheels, incorrect tire pressure, or worn suspension parts. Get alignment and check tire pressure immediately to prevent premature tire failure.",
+    "possible_causes": [
+      "Wheel alignment out of spec",
+      "Tire pressure too high or too low",
+      "Worn suspension parts",
+      "Worn toe or camber settings",
+      "Not rotating tires regularly"
+    ],
+    "urgency": "DRIVE CAREFULLY",
+    "urgency_reason": "Worn tires reduce grip, especially in wet conditions which are very common in the Philippines during rainy season.",
+    "dtc_codes": [],
+    "common_ph_vehicles": ["All vehicles"],
+    "estimated_fix": "Alignment: ₱500-1,500. Tire rotation: ₱200-500. Tire replacement if worn: ₱3,000-8,000 each."
+  },
+  {
+    "id": "engine_oil_change",
+    "category": "maintenance",
+    "title": "Engine Oil Needs Changing",
+    "symptoms": [
+      "oil is dark or black",
+      "car hasn't had oil change in 3+ months",
+      "engine sounds louder than usual",
+      "oil level is below minimum",
+      "mileage since last oil change exceeded recommendation"
+    ],
+    "taglish_symptoms": [
+      "maitim na ang oil",
+      "matagal na hindi na-change ang oil",
+      "mas malakas ang tunog ng engine",
+      "mababa ang oil level"
+    ],
+    "diagnosis": "Engine oil is due for a change. Fresh oil lubricates better, runs cooler, and protects the engine. In PH heat and traffic, oil degrades faster than in other climates. Change every 3-4 months or 5,000 km.",
+    "possible_causes": [
+      "Oil past its service interval",
+      "PH heat and traffic degrade oil faster",
+      "Wrong oil type or viscosity used previously"
+    ],
+    "urgency": "CAN DRIVE",
+    "urgency_reason": "Not urgent unless oil is critically low. But delaying oil changes shortens engine life.",
+    "dtc_codes": [],
+    "common_ph_vehicles": ["All vehicles"],
+    "estimated_fix": "Oil change at talyer (local shop): ₱500-1,000. At casa (dealership): ₱1,500-3,500. Use the correct oil grade for your car."
+  },
+  {
+    "id": "water_pump_failure",
+    "category": "cooling_system",
+    "title": "Water Pump Failure",
+    "symptoms": [
+      "coolant leaking from front of engine",
+      "grinding or whining noise from engine",
+      "engine overheating",
+      "coolant mixed with oil",
+      "squealing belt noise"
+    ],
+    "taglish_symptoms": [
+      "may tagas na coolant sa harap ng engine",
+      "may grinding na ingay sa engine",
+      "umiinit ang engine",
+      "nakahalong coolant at oil",
+      "may squealing na ingay sa belt"
+    ],
+    "diagnosis": "Water pump has failed. It is responsible for circulating coolant through the engine. Failure causes overheating rapidly. Needs immediate replacement.",
+    "possible_causes": [
+      "Water pump bearing seized",
+      "Water pump seal worn — causing coolant leak",
+      "Water pump impeller broken",
+      "Timing belt or chain driven pump failed with belt/chain"
+    ],
+    "urgency": "EMERGENCY",
+    "urgency_reason": "Engine will overheat quickly without coolant circulation. Can cause catastrophic engine damage if ignored.",
+    "dtc_codes": ["P0340", "P0343"],
+    "common_ph_vehicles": ["Toyota Vios", "Toyota Innova", "Honda City", "Mitsubishi Xpander"],
+    "estimated_fix": "Water pump replacement: ₱5,000-18,000 including labor. If timing belt driven, replace timing belt at the same time."
+  },
+  {
+    "id": "muffler_exhaust_leak",
+    "category": "exhaust",
+    "title": "Exhaust Leak or Muffler Damage",
+    "symptoms": [
+      "loud exhaust noise",
+      "exhaust smell inside the car",
+      "popping or hissing sounds",
+      "visible soot or rust on exhaust",
+      "vibration from exhaust system"
+    ],
+    "taglish_symptoms": [
+      "malakas ang exhaust",
+      "nababahala ang exhaust smell sa loob ng kotse",
+      "may popping o hissing na tunog",
+      "may soot o kalawangin sa exhaust"
+    ],
+    "diagnosis": "Exhaust system has a leak. If you can smell exhaust inside the car, this is a carbon monoxide hazard. Pull over, open windows, and stop driving immediately.",
+    "possible_causes": [
+      "Muffler cracked from age or road damage",
+      "Exhaust pipe joint separated",
+      "Exhaust manifold gasket blown",
+      "Rust through on exhaust pipe",
+      "Impact damage from pothole or road debris"
+    ],
+    "urgency": "DON'T DRIVE",
+    "urgency_reason": "Carbon monoxide from exhaust leaks is toxic and odorless. Exhaust smell inside is a serious health and safety hazard.",
+    "dtc_codes": ["P0420"],
+    "common_ph_vehicles": ["Toyota Hilux", "Ford Ranger", "Mitsubishi L300", "Toyota HiAce"],
+    "estimated_fix": "Muffler: ₱2,000-6,000. Exhaust pipe repair or replacement: ₱1,500-5,000. Full exhaust system: ₱8,000-20,000."
+  },
+  {
+    "id": "dashboard_warning_lights",
+    "category": "electrical",
+    "title": "Multiple Dashboard Warning Lights On",
+    "symptoms": [
+      "several warning lights on at the same time",
+      "all lights flash momentarily then some stay",
+      "oil pressure light on",
+      "ABS light on",
+      "airbag light on",
+      "battery and temperature lights on together"
+    ],
+    "taglish_symptoms": [
+      "maraming warning lights na naka-on",
+      "nag-flash lahat ng lights",
+      "naka-on ang oil pressure light",
+      "naka-on ang ABS light",
+      "naka-on ang airbag light"
+    ],
+    "diagnosis": "Multiple lights often indicate an electrical or sensor issue. If all lights flash together momentarily, it might just be the car initializing. If they stay on, get an OBD scan to read all the stored codes at once.",
+    "possible_causes": [
+      "Multiple sensor failures",
+      "ECU (Engine Control Unit) malfunction",
+      "Loose ground connection causing multiple false readings",
+      "Low battery voltage causing sensor errors",
+      "Wiring harness issue"
+    ],
+    "urgency": "DRIVE CAREFULLY",
+    "urgency_reason": "Depends on which lights. Oil pressure or temperature lights staying on means stop driving. ABS light means brakes may not have ABS protection.",
+    "dtc_codes": ["Multiple — requires OBD scan"],
+    "common_ph_vehicles": ["All modern vehicles"],
+    "estimated_fix": "OBD scan first: ₱200-500. Fix depends on actual codes. Could be as simple as a loose ground wire or as complex as ECU replacement."
+  }
+]
