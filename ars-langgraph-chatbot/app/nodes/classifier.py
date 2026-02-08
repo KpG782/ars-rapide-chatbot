@@ -27,7 +27,8 @@ def classify_intent(state: ChatState) -> ChatState:
     # Initialize Gemini
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.0-flash",
-        temperature=0.3  # Lower for more consistent classification
+        temperature=0.2,  # Lower for more consistent classification
+        max_tokens=50  # Classification only needs short response
     )
     
     # Format the prompt with user message

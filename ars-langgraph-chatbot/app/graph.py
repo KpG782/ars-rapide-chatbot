@@ -49,18 +49,22 @@ class ChatState(BaseModel):
 
 def build_graph() -> StateGraph:
     """
-    Build the LangGraph state machine for Phase 2.
+    Build the LangGraph state machine for Phase 3.
     
-    Flow: User Message → Classifier → Diagnosis → Response
+    Flow: User Message → Taglish Normalize → Classifier → Diagnosis → Cost Estimate → Response
     """
+    from app.nodes.taglish import preprocess_taglish
     from app.nodes.classifier import classify_intent
     from app.nodes.diagnosis import diagnose_problem
+    from app.nodes.cost_estimator import estimate_cost
     
     graph = StateGraph(ChatState)
     
-    # Add nodes
+    # Add nodes (Phase 3: added taglish preprocessing and cost estimation)
+    graph.add_node("taglish", preprocess_taglish)
     graph.add_node("classify", classify_intent)
     graph.add_node("diagnose", diagnose_problem)
+    graph.add_node("cost_estimate", estimate_cost)
     
     # Define routing logic based on intent
     def route_after_classification(state: ChatState) -> str:
@@ -70,7 +74,7 @@ def build_graph() -> StateGraph:
         if intent == "DIAGNOSIS":
             return "diagnose"
         elif intent == "COST_ESTIMATE":
-            # Phase 3: will route to cost estimation
+            # Direct cost inquiry (Phase 3)
             return END
         elif intent == "BOOKING":
             # Phase 4: will route to booking
@@ -78,8 +82,9 @@ def build_graph() -> StateGraph:
         else:  # GENERAL
             return END
     
-    # Set up graph flow
-    graph.set_entry_point("classify")
+    # Set up graph flow (Phase 3: taglish → classify → diagnose → cost_estimate)
+    graph.set_entry_point("taglish")
+    graph.add_edge("taglish", "classify")
     graph.add_conditional_edges(
         "classify",
         route_after_classification,
@@ -88,6 +93,7 @@ def build_graph() -> StateGraph:
             END: END
         }
     )
-    graph.add_edge("diagnose", END)
+    graph.add_edge("diagnose", "cost_estimate")
+    graph.add_edge("cost_estimate", END)
     
     return graph

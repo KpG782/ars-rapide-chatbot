@@ -28,15 +28,36 @@ def diagnose_problem(state: ChatState) -> ChatState:
     retriever = get_retriever(top_k=3)
     results = retriever.retrieve(user_message)
     
+    # Calculate confidence from RAG similarity scores
+    if results:
+        avg_similarity = sum(r['score'] for r in results) / len(results)
+        max_similarity = results[0]['score'] if results else 0.0
+        
+        # Confidence levels based on semantic similarity
+        if max_similarity >= 0.70:
+            confidence_level = "High"
+            confidence_pct = f"{max_similarity*100:.0f}%"
+        elif max_similarity >= 0.50:
+            confidence_level = "Medium"
+            confidence_pct = f"{max_similarity*100:.0f}%"
+        else:
+            confidence_level = "Low"
+            confidence_pct = f"{max_similarity*100:.0f}%"
+    else:
+        confidence_level = "Low"
+        confidence_pct = "N/A"
+        avg_similarity = 0.0
+    
     # Format context for LLM
     retrieved_context = retriever.format_context_for_llm(results)
     
-    print(f"✓ Retrieved {len(results)} relevant problems from knowledge base")
+    print(f"✓ Retrieved {len(results)} relevant problems (confidence: {confidence_level} - {confidence_pct})")
     
     # Step 2: Generate diagnosis with LLM
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.0-flash",
-        temperature=0.5  # Balanced for accurate yet natural responses
+        temperature=0.5,  # Balanced for accurate yet natural responses
+        max_tokens=250  # Keep diagnosis concise (100-150 words)
     )
     
     # Format prompt with user message and retrieved context
@@ -61,9 +82,10 @@ def diagnose_problem(state: ChatState) -> ChatState:
     # Update state
     state.diagnosis = diagnosis_text
     state.urgency_level = urgency
-    state.symptoms = user_message  # Store original symptoms
+    state.symptoms = [user_message]  # Store original symptoms as list
+    state.confidence = avg_similarity  # Store confidence score
     
-    print(f"✓ Generated diagnosis with urgency: {urgency}")
+    print(f"✓ Generated diagnosis with urgency: {urgency} (confidence: {confidence_level})")
     
     return state
 

@@ -54,18 +54,22 @@ ars-langgraph-chatbot/
 
 Phase 1 — Environment & Foundation: ✅ Complete  
 Phase 2 — RAG & Diagnosis: ✅ Complete  
-Phase 3 — Cost & Taglish: ⬜ Not Started  
-Phase 4 — Booking & Polish: ⬜ Not Started
+Phase 3 — Cost & Taglish: ✅ Complete  
+Phase 4 — Booking & Polish: ⬜ Not Started  
 
-**What's Working Now:**
-- ✅ 25 car problems loaded with Taglish support
-- ✅ Semantic search using Sentence-Transformers
-- ✅ RAG-powered diagnosis with Gemini 2.0 Flash
-- ✅ Intent classification
-- ✅ Urgency level detection (EMERGENCY | DON'T DRIVE | DRIVE CAREFULLY | CAN DRIVE)
-- ✅ Interactive chat mode
+**What's Working Now (Competition-Ready):**
+- ✅ 25 car problems with 89 Taglish terms
+- ✅ Taglish normalization ("umiinit ang kotse" → "car is overheating")
+- ✅ Semantic search with confidence scoring
+- ✅ RAG-powered diagnosis (concise, 100-150 words)
+- ✅ Cost estimation with Metro Manila pricing
+- ✅ Urgency classification with visual indicators
+- ✅ Natural code-switching responses
+- ✅ Interactive chat mode with confidence bars
 
-See [PHASE2_COMPLETE.md](PHASE2_COMPLETE.md) for detailed Phase 2 documentation.
+**Response Quality:** Optimized for competition demo (concise, actionable, engaging)
+
+See [PHASE3_COMPLETE.md](PHASE3_COMPLETE.md) for detailed Phase 3 documentation.
 
 ## 🧪 Testing
 

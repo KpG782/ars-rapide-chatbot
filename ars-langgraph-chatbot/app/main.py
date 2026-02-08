@@ -3,6 +3,10 @@ ARS Rapide Chatbot — Main Entry Point
 Validates environment and starts the application.
 """
 
+import warnings
+# Suppress Pydantic V1 deprecation warning (known issue with LangChain + Python 3.14)
+warnings.filterwarnings("ignore", category=UserWarning, module="langchain_core._api.deprecation")
+
 import os
 import sys
 from pathlib import Path
@@ -49,9 +53,9 @@ def main() -> None:
     
     print("✓ ARS Rapide Chatbot ready")
     print("\n" + "="*60)
-    print("Phase 2 — RAG & Diagnosis: Interactive Mode")
+    print("Phase 3 — Cost Estimation & Taglish: Interactive Mode")
     print("="*60)
-    print("\nDescribe your car problem and get instant diagnosis!")
+    print("\nDescribe your car problem and get instant diagnosis with pricing!")
     print("Type 'quit' or 'exit' to stop.\n")
     
     # Interactive loop
@@ -77,6 +81,13 @@ def main() -> None:
             print("\n" + "-"*60)
             if result.get("diagnosis"):
                 print(f"🔧 DIAGNOSIS:\n{result['diagnosis']}\n")
+                
+                # Display confidence if available
+                if result.get("confidence"):
+                    confidence_pct = f"{result['confidence']*100:.0f}%"
+                    confidence_bar = "█" * int(result['confidence'] * 10)
+                    print(f"📊 CONFIDENCE: {confidence_pct} {confidence_bar}\n")
+                
                 if result.get("urgency_level"):
                     urgency_icon = {
                         "EMERGENCY": "🚨",
@@ -84,7 +95,14 @@ def main() -> None:
                         "DRIVE CAREFULLY": "⚠️",
                         "CAN DRIVE": "✅"
                     }.get(result["urgency_level"], "ℹ️")
-                    print(f"{urgency_icon} URGENCY: {result['urgency_level']}")
+                    print(f"{urgency_icon} URGENCY: {result['urgency_level']}\n")
+                
+                # Display cost estimate (Phase 3)
+                if result.get("cost_estimate"):
+                    cost_data = result["cost_estimate"]
+                    print("💰 COST ESTIMATE:")
+                    print(cost_data["message"])
+                    print()
             else:
                 print("💬 General inquiry detected. Ready to help!")
             print("-"*60 + "\n")
